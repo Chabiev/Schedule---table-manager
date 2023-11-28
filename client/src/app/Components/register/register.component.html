@@ -1,0 +1,92 @@
+<div class="container d-flex justify-content-center">
+  <div class="col-sm-8 mt-4">
+    <h2 class="mb-4 text-center">Register</h2>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="Register()" class="text-center">
+      <div class="mb-3 row justify-content-center">
+        <label for="firstName" class="form-label visually-hidden">First Name:</label>
+        <div class="col-sm-4">
+          <input type="text" id="firstName" class="form-control border-dark" formControlName="firstName" placeholder="First Name"
+                 [ngClass]="{ 'is-invalid': registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched) }">
+          <div class="invalid-feedback" *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+            Please enter a valid first name.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3 row justify-content-center">
+        <label for="lastName" class="form-label visually-hidden">Last Name:</label>
+        <div class="col-sm-4">
+          <input type="text" id="lastName" class="form-control border-dark" formControlName="lastName" placeholder="Last Name"
+                 [ngClass]="{ 'is-invalid': registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched) }">
+          <div class="invalid-feedback" *ngIf="registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
+            Please enter a valid last name.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3 row justify-content-center">
+        <label for="email" class="form-label visually-hidden">Email:</label>
+        <div class="col-sm-4">
+          <input type="email" id="email" class="form-control border-dark" formControlName="email" placeholder="Email"
+                 [ngClass]="{ 'is-invalid': registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched) }">
+          <div class="invalid-feedback" *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+            Please enter a valid email address.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3 row justify-content-center">
+        <label for="password" class="form-label visually-hidden">Password:</label>
+        <div class="col-sm-4">
+          <input type="password" id="password" class="form-control border-dark" formControlName="password" placeholder="Password"
+                 [ngClass]="{ 'is-invalid': registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched) }">
+          <small class="text-danger" *ngIf="registrationForm.get('password')?.hasError('minlength')">
+            Password must be at least 6 characters
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3 row justify-content-center">
+        <label for="confirmPassword" class="form-label visually-hidden">Confirm Password:</label>
+        <div class="col-sm-4">
+          <input type="password" id="confirmPassword" class="form-control border-dark" formControlName="confirmPassword" placeholder="Confirm Password"
+                 [ngClass]="{ 'is-invalid': registrationForm.get('confirmPassword')?.invalid && (registrationForm.get('confirmPassword')?.
+                 dirty || registrationForm.get('confirmPassword')?.touched) }">
+          <small class="text-danger" *ngIf="registrationForm.get('confirmPassword')?.hasError('minlength')">
+            Confirm Password must be at least 6 characters
+          </small>
+          <small class="text-danger" *ngIf="registrationForm.hasError('passwordMismatch') && registrationForm.get('confirmPassword')?.
+          dirty">
+            Password and Confirm Password do not match
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3 row justify-content-center">
+        <label for="jobId" class="form-label visually-hidden">Job:</label>
+        <div class="col-sm-4">
+          <select id="jobId" class="form-select border-dark" formControlName="jobId"
+                  [ngClass]="{ 'is-invalid': registrationForm.get('jobId')?.invalid && (registrationForm.get('jobId')?.
+                  dirty || registrationForm.get('jobId')?.touched) }">
+            <option [ngValue]="null" disabled selected>Select a Job</option>
+            <option *ngFor="let job of jobOptions" [ngValue]="job">{{ job.title }}</option>
+          </select>
+          <div class="invalid-feedback" *ngIf="registrationForm.get('jobId')?.invalid && (registrationForm.get('jobId')?.
+          dirty || registrationForm.get('jobId')?.touched)">
+            Please select a job.
+          </div>
+        </div>
+      </div>
+
+      <div class=" row justify-content-center">
+        <div class="col-sm-4" >
+          <button type="submit" class="btn btn-success" [disabled]="registrationForm.invalid">Register</button>
+        </div>
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-primary" (click)="goToLogin()">Back to Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

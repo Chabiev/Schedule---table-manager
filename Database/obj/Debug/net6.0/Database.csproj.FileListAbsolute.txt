@@ -1,0 +1,17 @@
+D:\Jobs\HCM\Schedule\Database\bin\Debug\net6.0\Database.deps.json
+D:\Jobs\HCM\Schedule\Database\bin\Debug\net6.0\Database.runtimeconfig.json
+D:\Jobs\HCM\Schedule\Database\bin\Debug\net6.0\Database.dll
+D:\Jobs\HCM\Schedule\Database\bin\Debug\net6.0\Database.pdb
+D:\Jobs\HCM\Schedule\Database\bin\Debug\net6.0\Business.dll
+D:\Jobs\HCM\Schedule\Database\bin\Debug\net6.0\Business.pdb
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\Database.csproj.AssemblyReference.cache
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\Database.AssemblyInfoInputs.cache
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\Database.AssemblyInfo.cs
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\Database.csproj.CoreCompileInputs.cache
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\Database.csproj.CopyComplete
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\Database.dll
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\refint\Database.dll
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\Database.pdb
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\Database.genruntimeconfig.cache
+D:\Jobs\HCM\Schedule\Database\obj\Debug\net6.0\ref\Database.dll

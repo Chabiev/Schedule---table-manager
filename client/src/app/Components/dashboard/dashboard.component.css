@@ -1,0 +1,91 @@
+table {
+  border: 3px solid #000;
+  border-collapse: collapse;
+
+}
+.table-container {
+  max-width: 900px;
+  width: 800px;
+  margin-top: 5%;
+  margin-left: 20%;
+  display: block;
+}
+th {
+  border: 2px solid #000;
+  min-width: 100px;
+  height: 50px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+td {
+  border: 2px solid #000;
+  font-size: 14px;
+  min-width: 140px;
+  max-width: 140px;
+  min-height: 50px;
+  max-height: 50px;
+  height: 50px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding-bottom: 2%;
+}
+.span {
+  padding-bottom: 5px;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.firstname-lastname {
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navigation-buttons {
+  margin-bottom: 2%;
+  margin-left: 50%;
+}
+
+.divider {
+  border-top: 1px solid #000;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+}
+
+.morning-shift,
+.evening-shift {
+  max-width: 150px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.morning-shift {
+  top: 0;
+  height: 50%;
+  background: lightgreen;
+}
+
+.evening-shift {
+  top: 50%;
+  height: 50%;
+  background: lightblue;
+}
+
+.evening-shift {
+  bottom: 0;
+}
+.week-title{
+  font-size: xx-large;
+  margin-bottom: 5%;
+}
